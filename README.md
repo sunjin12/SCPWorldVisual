@@ -1,30 +1,32 @@
 # SCP World Visual
 
-SCP Foundation 위키 콘텐츠를 기반으로 한 로컬 RAG 인터랙티브 페르소나 챗봇 데모.
-본 프로젝트는 서버리스 환경에서 **100% 로컬 환경(SQLite + NumPy 로컬 벡터 검색 + Ollama LLM + 로컬 인증)**으로 마이그레이션되었으며, 프론트엔드의 비주얼과 애니메이션이 대폭 강화되었습니다.
+SCP Foundation 위키 콘텐츠를 기반으로 한 페르소나 챗봇 데모
 
 ---
 
 ## 📸 Visual Showcase
 
-### 🔐 로컬 오퍼레이터 로그인
-![로그인화면](docs/images/screens/로그인화면.PNG)
+### 🔐 로컬 오퍼레이터 로그인 & 캐릭터 선택
+| 🔐 로컬 오퍼레이터 로그인 | 👥 캐릭터 선택 화면 |
+| :---: | :---: |
+| ![로그인화면](docs/images/screens/로그인화면.PNG) | ![연구원선택](docs/images/screens/연구원선택.PNG) |
 
-### 👥 페르소나 선택 및 대화 세션
-| 🧪 연구원 선택 및 대화 | 🕵️ 에이전트 선택 및 대화 | 🤖 SCP-079 선택 및 대화 |
+### 👥 페르소나 비주얼 프로필 (배경 + 캐릭터)
+| 🧪 연구원 프로필 | 🕵️ 에이전트 프로필 | 🤖 SCP-079 프로필 |
 | :---: | :---: | :---: |
-| ![연구원선택](docs/images/screens/연구원선택.PNG) | ![에이전트선택](docs/images/screens/에이전트선택.PNG) | ![SCP-079선택](docs/images/screens/SCP-079선택.PNG) |
+| ![연구원프로필](docs/images/screens/researcher_preview.png) | ![에이전트프로필](docs/images/screens/agent_preview.png) | ![SCP-079프로필](docs/images/screens/scp079_preview.png) |
+
+### 💬 실시간 대화 세션 (실행 화면)
+| 🧪 연구원 대화 | 🕵️ 에이전트 대화 | 🤖 SCP-079 대화 |
+| :---: | :---: | :---: |
 | ![연구원대화](docs/images/screens/연구원대화.PNG) | ![에이전트대화](docs/images/screens/에이전트대화.PNG) | ![SCP-079대화](docs/images/screens/SCP-079대화.PNG) |
 
 ---
 
 ## ✨ Key Features (핵심 기능)
 
-*   **Local RAG Engine**: SQLite 및 NumPy 벡터 검색을 활용하여 네트워크 연결 없이도 SCP 위키 문서를 검색하고 답변의 정확한 출처(SCP 번호 및 원문 URL)를 제시합니다.
 *   **Persona Dialogue & Stream**: 3인의 재단 페르소나(연구원 Dr. [REDACTED], 요원 Agent [REDACTED], SCP-079 Old AI)별 독창적인 대화 페르소나를 구현하였으며, SSE 스트리밍 답변을 제공합니다.
 *   **Visual Monitor & Dynamic Sprites**: 반응형 스플릿 스크린 UI 구조를 채택하여 실시간 상태 로그를 모니터링할 수 있으며, 대화 진행에 따라 동적으로 반응하는 캐릭터 스프라이트 애니메이션이 탑재되어 있습니다.
-*   **Operator Authentication**: 로컬 Operator ID 기반의 안전한 세션 인증 방식을 적용하였습니다.
-*   **Hanja-to-Hangul Translation**: 데이터 파이프라인에서 한자가 섞인 문서를 한글로 자동 번역 및 정제하여 임베딩 및 답변의 가독성을 최적화했습니다.
 
 ---
 
