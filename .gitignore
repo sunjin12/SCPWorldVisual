@@ -1,0 +1,69 @@
+# Secrets — service account keys, credentials, tokens
+backend/.secrets/
+**/.secrets/
+*-sa.json
+*-service-account.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.venv/
+venv/
+.uv/
+
+# Flutter
+frontend/.dart_tool/
+frontend/.packages
+frontend/build/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/android/.gradle/
+frontend/android/local.properties
+frontend/ios/Pods/
+frontend/ios/.symlinks/
+frontend/.pub-cache/
+frontend/pubspec.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Data
+data-pipeline/data/*.json
+data-pipeline/data/*.csv
+data-pipeline/data/*.parquet
+!data-pipeline/data/.gitkeep
+
+# Docker
+*.log
+
+# Kubernetes secrets (real values)
+k8s/secrets/*-values.yaml
+
+# OS
+desktop.ini
+
+# Claude Code / LLM session transcripts & local config
+.specstory/
+.claude/
+
+# Local DB & AI Cache & Scratch
+*.db
+.hf_cache/
+scratch/

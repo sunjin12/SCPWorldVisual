@@ -1,0 +1,32 @@
+[project]
+name = "scp-world-data-pipeline"
+version = "0.1.0"
+description = "SCP World — Data Pipeline for scraping, preprocessing, and embedding SCP wiki documents"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.32.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=5.3.0",
+    "sentence-transformers>=3.4.0",
+    "tqdm>=4.67.0",
+    "tiktoken>=0.9.0",
+    "torch",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "ruff>=0.9.0",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
